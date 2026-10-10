@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3D Movie Test</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; background: #0d0f14; color: #e8eaf0; font: 16px/1.5 system-ui, sans-serif; }
+  main { max-width: 960px; margin: 0 auto; padding: 32px 16px 48px; }
+  h1 { margin: 0 0 4px; font-size: 28px; }
+  p { margin: 8px 0; color: #aab0c0; }
+  video { width: 100%; margin: 20px 0 12px; background: #000; border-radius: 8px; }
+  .link { display: flex; gap: 8px; margin-top: 8px; }
+  input { flex: 1; min-width: 0; padding: 10px 12px; border: 1px solid #2a3040; border-radius: 6px;
+          background: #151922; color: #e8eaf0; font: 14px ui-monospace, Consolas, monospace; }
+  button { padding: 10px 16px; border: 0; border-radius: 6px; background: #2b7fff; color: #fff;
+           font: inherit; cursor: pointer; }
+</style>
+</head>
+<body>
+<main>
+  <h1>3D Movie Test</h1>
+  <p>Episode 1 in full side-by-side 3D (3840&times;1080, left eye | right eye).</p>
+
+  <video controls preload="metadata" src="https://github.com/tokyubevoxelverse/3DMovieTest/releases/download/ep1/Ep1S1_Quest3_SBS.mp4"></video>
+
+  <p>In a browser this plays as two pictures next to each other. For 3D, paste the link below into a
+     VRChat video player and turn its 3D / SBS mode on. Untrusted URLs must be allowed in VRChat settings.</p>
+  <div class="link">
+    <input id="url" readonly value="https://github.com/tokyubevoxelverse/3DMovieTest/releases/download/ep1/Ep1S1_Quest3_SBS.mp4">
+    <button onclick="navigator.clipboard.writeText(document.getElementById('url').value); this.textContent='Copied'">Copy</button>
+  </div>
+</main>
+</body>
+</html>
